@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATVD alert</title>
+</head>
+<body>
+    <script>
+        alert("GREMIO MAIR DO SUL     ");
+      </script>
+      <script src="script.js"></script>
+      
+      <script>
+        var num1 = 5;
+        var num2 = 3;
+        var soma = num1 + num2;
+        alert("A soma de " + num1 + " e " + num2 + " é " + soma);
+      </script>
+      <input type="text" id="nomeCompleto" placeholder="Nome Completo">
+      <button onclick="exibirNome()">Exibir Nome</button>
+      <script>
+        function exibirNome() {
+          var nome = document.getElementById("nomeCompleto").value;
+          alert("O Nome Completo é: \"" + nome + "\". Tem " + nome.length + " letras.");
+        }
+      </script>
+      <img id="lampada" src="lampada-apagada.jpg" onclick="trocarLampada()">
+      <script>
+        function trocarLampada() {
+          var img = document.getElementById("lampada");
+          img.src = "lampada-acesa.jpg";
+        }
+      </script>
+      <img id="lampada" src="lampada.jpg" onmouseover="this.src='lampada-acesa'" onmouseout="this.src='lampada-apagada'">
+      <input type="text" id="nome" placeholder="Nome">
+<input type="text" id="sobrenome" placeholder="Sobrenome">
+<button onclick="exibirSaudacao()">Saudação</button>
+<script>
+  function exibirSaudacao() {
+    var nome = document.getElementById("nome").value;
+    var sobrenome = document.getElementById("sobrenome").value;
+    alert("Olá " + nome + " " + sobrenome);
+  }
+</script>
+<input type="text" maxlength="11" id="cpf" onkeyup="formatarCPF()">
+<span id="cpfFormatado"></span>
+<script>
+  function formatarCPF() {
+    var cpf = document.getElementById("cpf").value;
+    var cpfFormatado = cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-" + cpf.substring(9);
+    document.getElementById("cpfFormatado").textContent = cpfFormatado;
+  }
+</script>
+<input type="text" maxlength="14" id="cpfPoint" onkeyup="removerPontuacao()">
+<span id="cpfSemPontuacao"></span>
+<script>
+  function removerPontuacao() {
+    var cpf = document.getElementById("cpfPoint").value;
+    var cpfSemPontuacao = cpf.replace(g, '');
+    document.getElementById("cpfSemPontuacao").textContent = cpfSemPontuacao;
+
+</script>
+<button onclick="mudarCor('green')" id="verde">Verde</button>
+<button onclick="mudarCor('red')" id="vermelho">Vermelho</button>
+<script>
+  function mudarCor(cor) {
+    document.body.style.backgroundColor = cor;
+  }
+</script>
+
+    
+</body>
+</html>
